@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  dd7:
+    hostname: dd7
+    image: kafeisystems/dd7
+    restart: on-failure
+    ports:
+      - "80"
+    volumes:
+      - ./code:/var/www/html
+      - ./settings:/var/www/html/sites/default
+      - ./files:/var/www/html/sites/default/files
+    depends_on:
+      - db
+  db:
+    hostname: db
+    image: mysql:5
+    restart: on-failure
+    ports:
+      - "3306"
+    command: --max_allowed_packet=32505856
+    stdin_open: true
+    tty: true
+    environment:
+      - MYSQL_DATABASE=dd7
+      - MYSQL_USER=dd7
+      - MYSQL_PASSWORD=dd7 
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+      - ./exports:/var/lib/mysql-files
