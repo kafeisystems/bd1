@@ -640,9 +640,9 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
 
 $databases['default']['default'] = array(
   'driver' => 'mysql',
-  'database' => 'dd7',
-  'username' => 'dd7',
-  'password' => 'dd7',
+  'database' => 'bd1',
+  'username' => 'bd1',
+  'password' => 'bd1',
   'host' => 'db',
   'prefix' => '',
 );

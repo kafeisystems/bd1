@@ -1,9 +1,9 @@
-# DD7
+# BD1
 
-This is a Drupal7 + Drush hosting environemnt created entirely in Docker.
+This is a Backdrop hosting environemnt created entirely in Docker.
 
 The goal of this project is to create the most simple environment possible
-using purely docker concepts - no custom scripting specific to Drupal.
+using purely docker concepts - no custom scripting specific to Backdrop.
 
 Since we are using "pure Docker" we can presume the following is true:
 
@@ -39,7 +39,7 @@ project is about. The name will be used to distinguish which container you are
 running when you start to have lots of projects.
 
     Here is an example using Github's HTTPs URL to clone a project and call it `<my-project>`:
-    `git clone https://github.com/kafeisystems/dd7.git <my-project>`
+    `git clone https://github.com/kafeisystems/bd1.git <my-project>`
 
 1. Create a subfolder inside this folder called `code` with your project's code
 base. The entire *code* base, the Drupal/Backdrop core files and any modules and
@@ -55,7 +55,7 @@ folder has in it.
     The provided settings/settings.php file has the database settings pre-populated at the bottom of the file.
 
     It uses the default connection values (databse host:
-"db", name: "dd7", user: "dd7", pass: "dd7").
+"db", name: "bd1", user: "bd1", pass: "bd1").
 
 4. Your files should be unzipped into the `files` folder.
 
@@ -65,7 +65,7 @@ symlinks, but that is up to you to research and figure out if you want to do
 things that way.
 
 4. Finally, you will need to put a copy of your database into the `sql` folder,
-USING THE NAME dd7.sql.gz, if gzipped, or dd7.sql if not gzipped.
+USING THE NAME bd1.sql.gz, if gzipped, or bd1.sql if not gzipped.
 
     Yes, if you are wondering, you may put additional files and they will be
 auto-imported as well into a database resembling the name of the file. You
